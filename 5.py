@@ -1,118 +1,169 @@
-x = 5
-y = "John"
-print(x)
-print(y)
-
-x = 4       # x is of type int
-x = "Sally" # x is now of type str
-print(x)
-
-x = str(3)    # x will be '3'
-y = int(3)    # y will be 3
-z = float(3)  # z will be 3.0
-
-x = 5
-y = "John"
-print(type(x))
-print(type(y))
-
-x = "John"
-print(x)
-# is the same as
-x = 'John'
-print(x)
-
-a = 4
-A = "Sally"
-#A will not overwrite a
-print(a)
-print(A)
-#Variable names
-myvar = "John"
-my_var = "John"
-_my_var = "John"
-myVar = "John"
-MYVAR = "John"
-myvar2 = "John"
-
-
-print(myvar)
-print(my_var)
-print(_my_var)
-print(myVar)
-print(MYVAR)
-print(myvar2)
-#Assign Multiple Values
-x, y, z = "Orange", "Banana", "Cherry"
-print(x)
-print(y)
-print(z)
-#2
-x = y = z = "Orange"
-print(x)
-print(y)
-print(z)
-#3
-fruits = ["apple", "banana", "cherry"]
-x, y, z = fruits
-print(x)
-print(y)
-print(z)
-#Output Variables
-x = "Python is awesome"
-print(x)
-#2
-x = "Python"
-y = "is"
-z = "awesome"
-print(x, y, z)
-#3
-x = "Python "
-y = "is "
-z = "awesome"
-print(x + y + z)
-#4
-x = 5
-y = 10
-print(x + y)
-#5
-x = 5
-y = "John"
-print(x, y)
-#Global Variables
+#Python Tuples
 #1
-x = "awesome"
-
-def myfunc():
-  print("Python is " + x)
-
-myfunc()
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
 #2
-x = "awesome"
-
-def myfunc():
-  x = "fantastic"
-  print("Python is " + x)
-
-myfunc()
-
-print("Python is " + x)
+thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+print(thistuple)
 #3
-def myfunc():
-  global x
-  x = "fantastic"
-
-myfunc()
-
-print("Python is " + x)
+thistuple = ("apple", "banana", "cherry")
+print(len(thistuple))
 #4
-x = "awesome"
+thistuple = ("apple",)
+print(type(thistuple))
 
-def myfunc():
-  global x
-  x = "fantastic"
-
-myfunc()
-
-print("Python is " + x)
+#NOT a tuple
+thistuple = ("apple")
+print(type(thistuple))
 #5
+tuple1 = ("apple", "banana", "cherry")
+tuple2 = (1, 5, 7, 9, 3)
+tuple3 = (True, False, False)
+
+print(tuple1)
+print(tuple2)
+print(tuple3)
+#6
+tuple1 = ("apple", "banana", "cherry")
+tuple2 = (1, 5, 7, 9, 3)
+tuple3 = (True, False, False)
+
+print(tuple1)
+print(tuple2)
+print(tuple3)
+#7
+tuple1 = ("abc", 34, True, 40, "male")
+
+print(tuple1)
+#8
+mytuple = ("apple", "banana", "cherry")
+print(type(mytuple))
+#9
+thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+print(thistuple)
+
+#Access Tuple Items
+#1
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[1])
+#2
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[-1])
+#3
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:5])
+#4
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[:4])
+#5
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:])
+#6
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[-4:-1])
+#7
+thistuple = ("apple", "banana", "cherry")
+if "apple" in thistuple:
+  print("Yes, 'apple' is in the fruits tuple")
+#Update Tuples
+#1
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+#2
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+
+print(thistuple)
+#3
+thistuple = ("apple", "banana", "cherry")
+y = ("orange",)
+thistuple += y
+
+print(thistuple)
+#4
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+
+print(thistuple)
+#5
+thistuple = ("apple", "banana", "cherry")
+del thistuple
+print(thistuple)
+#Unpacking a Tuple
+#1
+fruits = ("apple", "banana", "cherry")
+
+print(fruits)
+#2
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+#3
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+#4
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+
+(green, *tropic, red) = fruits
+
+print(green)
+print(tropic)
+print(red)
+#Loop Tuples
+#1
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
+#2
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+  print(thistuple[i])
+#3
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+#Join Tuples
+#1
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
+#2
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple)
+#Tuple Methods
+#1
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+
+x = thistuple.count(5)
+
+print(x)
+#2
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+
+x = thistuple.index(8)
+
+print(x)
+#Tuple Exercises

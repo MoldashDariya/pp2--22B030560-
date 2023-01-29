@@ -1,19 +1,46 @@
-#This is a comment
-print("Hello, World!")
+#Python Arrays
+#1
+cars = ["Ford", "Volvo", "BMW"]
 
-print("Hello, World!") #This is a comment
+print(cars)
+#2
+cars = ["Ford", "Volvo", "BMW"]
 
-#print("Hello, World!")
-print("Cheers, Mate!")
+x = cars[0]
 
-#This is a comment
-#written in
-#more than just one line
-print("Hello, World!")
+print(x)
+#3
+cars = ["Ford", "Volvo", "BMW"]
 
-"""
-This is a comment
-written in
-more than just one line
-"""
-print("Hello, World!")
+cars[0] = "Toyota"
+
+print(cars)
+#4
+cars = ["Ford", "Volvo", "BMW"]
+
+x = len(cars)
+
+print(x)
+#5
+cars = ["Ford", "Volvo", "BMW"]
+
+for x in cars:
+  print(x)
+#6
+cars = ["Ford", "Volvo", "BMW"]
+
+cars.append("Honda")
+
+print(cars)
+#7
+cars = ["Ford", "Volvo", "BMW"]
+
+cars.pop(1)
+
+print(cars)
+#8
+cars = ["Ford", "Volvo", "BMW"]
+
+cars.remove("Volvo")
+
+print(cars)

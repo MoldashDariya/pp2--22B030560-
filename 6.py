@@ -1,233 +1,294 @@
-x = 5
-print(type(x))
+#Python Sets 
+#1
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+#2
+thisset = {"apple", "banana", "cherry"}
 
-x = "Hello World"
+print(len(thisset))
+#3
+set1 = {"apple", "banana", "cherry"}
+set2 = {1, 5, 7, 9, 3}
+set3 = {True, False, False}
 
-#display x:
+print(set1)
+print(set2)
+print(set3)
+#4
+set1 = {"abc", 34, True, 40, "male"}
+
+print(set1)
+#5
+myset = {"apple", "banana", "cherry"}
+print(type(myset))
+#6
+thisset = set(("apple", "banana", "cherry")) # note the double round-brackets
+print(thisset)
+#Access Set Items
+#1
+thisset = {"apple", "banana", "cherry"}
+
+for x in thisset:
+  print(x)
+#2
+thisset = {"apple", "banana", "cherry"}
+
+print("banana" in thisset)
+#3
+thisset = {"apple", "banana", "cherry"}
+
+thisset.add("orange")
+
+print(thisset)
+#4
+thisset = {"apple", "banana", "cherry"}
+tropical = {"pineapple", "mango", "papaya"}
+
+thisset.update(tropical)
+
+print(thisset)
+#5
+thisset = {"apple", "banana", "cherry"}
+mylist = ["kiwi", "orange"]
+
+thisset.update(mylist)
+
+print(thisset)
+
+#Remove Set Items
+#1
+thisset = {"apple", "banana", "cherry"}
+
+thisset.remove("banana")
+
+print(thisset)
+#2
+thisset = {"apple", "banana", "cherry"}
+
+thisset.discard("banana")
+
+print(thisset)
+#3
+thisset = {"apple", "banana", "cherry"}
+
+x = thisset.pop()
+
 print(x)
 
-#display the data type of x:
-print(type(x))
+print(thisset)
+#4
+thisset = {"apple", "banana", "cherry"}
 
-x = 20
+thisset.clear()
 
-#display x:
-print(x)
+print(thisset)
+#5
+thisset = {"apple", "banana", "cherry"}
 
-#display the data type of x:
-print(type(x))
+del thisset
 
-x = 20.5
+print(thisset)
 
-#display x:
-print(x)
+#Loop Sets
+#1
+thisset = {"apple", "banana", "cherry"}
 
-#display the data type of x:
-print(type(x))
-x = 1j
+for x in thisset:
+  print(x)
 
-#display x:
-print(x)
+#Join Sets
+#1
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
 
-#display the data type of x:
-print(type(x))
+set3 = set1.union(set2)
+print(set3)
+#2
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
 
-x = ["apple", "banana", "cherry"]
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = ("apple", "banana", "cherry")
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = range(6)
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = {"name" : "John", "age" : 36}
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
+set1.update(set2)
+print(set1)
+#3
 x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
 
-#display x:
+x.intersection_update(y)
+
+print(x)
+#4
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.intersection(y)
+
+print(z)
+#5
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.symmetric_difference_update(y)
+
+print(x)
+#6
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.symmetric_difference_update(y)
+
 print(x)
 
-#display the data type of x:
-print(type(x))
+#Set Methods
+#add
+fruits = {"apple", "banana", "cherry"}
 
-x = frozenset({"apple", "banana", "cherry"})
+fruits.add("orange")
 
-#display x:
+print(fruits)
+#2
+fruits = {"apple", "banana", "cherry"}
+
+fruits.add("apple")
+
+print(fruits)
+
+#clear
+fruits = {"apple", "banana", "cherry"}
+
+fruits.clear()
+
+print(fruits)
+#copy
+fruits = {"apple", "banana", "cherry"}
+
+x = fruits.copy()
+
 print(x)
+#difference
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
 
-#display the data type of x:
-print(type(x))
+z = x.difference(y)
 
-x = True
+print(z)
+#2
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
 
-#display x:
+z = y.difference(x)
+
+print(z)
+#difference update
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.difference_update(y)
+
 print(x)
+#discard
+fruits = {"apple", "banana", "cherry"}
 
-#display the data type of x:
-print(type(x))
+fruits.discard("banana")
 
-x = b"Hello"
+print(fruits)
+#intersection
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
 
-#display x:
+z = x.intersection(y)
+
+print(z)
+#2
+x = {"a", "b", "c"}
+y = {"c", "d", "e"}
+z = {"f", "g", "c"}
+
+result = x.intersection(y, z)
+
+print(result)
+#intersection update
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.intersection_update(y)
+
 print(x)
+#2
+x = {"a", "b", "c"}
+y = {"c", "d", "e"}
+z = {"f", "g", "c"}
 
-#display the data type of x:
-print(type(x))
+x.intersection_update(y, z)
 
-x = bytearray(5)
-
-#display x:
 print(x)
+#isdisjoint
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "facebook"}
 
-#display the data type of x:
-print(type(x))
+z = x.isdisjoint(y)
 
-x = memoryview(bytes(5))
+print(z)
+#issubset
+x = {"a", "b", "c"}
+y = {"f", "e", "d", "c", "b", "a"}
 
-#display x:
+z = x.issubset(y)
+
+print(z)
+#issuperset
+x = {"f", "e", "d", "c", "b", "a"}
+y = {"a", "b", "c"}
+
+z = x.issuperset(y)
+
+print(z)
+#pop
+fruits = {"apple", "banana", "cherry"}
+
+fruits.pop()
+
+print(fruits)
+#remove
+fruits = {"apple", "banana", "cherry"}
+
+fruits.remove("banana")
+
+print(fruits)
+#symmetric_difference
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.symmetric_difference(y)
+
+print(z)
+#symmetric_difference_update
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.symmetric_difference_update(y)
+
 print(x)
+#union
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
 
-#display the data type of x:
-print(type(x))
-x = None
+z = x.union(y)
 
-#display x:
+print(z)
+#2
+x = {"a", "b", "c"}
+y = {"f", "d", "a"}
+z = {"c", "d", "e"}
+
+result = x.union(y, z)
+
+print(result)
+#update
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.update(y)
+
 print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = str("Hello World")
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = int(20)
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = float(20.5)
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = complex(1j)
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = list(("apple", "banana", "cherry"))
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = tuple(("apple", "banana", "cherry"))
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = range(6)
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = dict(name="John", age=36)
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-
-x = set(("apple", "banana", "cherry"))
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = frozenset(("apple", "banana", "cherry"))
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = bool(5)
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = bytes(5)
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = bytearray(5)
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
-
-x = memoryview(bytes(5))
-
-#display x:
-print(x)
-
-#display the data type of x:
-print(type(x))
 
 
